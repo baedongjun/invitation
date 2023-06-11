@@ -9,7 +9,7 @@ export default function BottomIcon(props){
     <img 
       src={props.iconSrc} 
       onClick={()=>{ router.push(props.linkUrl) }} 
-      style={{ width:'36rem', height:'36rem' }} 
+      style={{ width:'36rem', height:'36rem', cursor : 'pointer' }} 
     />
   )
 }
