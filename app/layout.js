@@ -1,6 +1,14 @@
 import BottomBar from '/components/Bottombar';
 import './globals.css'
 
+export const metadata = {
+  title : {
+    default : '배동준의 빡코딩',
+    template : ''
+  },
+  description : '오늘도 빡코딩!'
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">

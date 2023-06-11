@@ -6,6 +6,7 @@ import { useState } from "react"
 export default function Write() {
   
   let [contents, setContents] = useState('')
+  let [src, setSrc] = useState('')
 
   return (
     <div className="h-full flex-1 overflow-auto ">
@@ -26,6 +27,35 @@ export default function Write() {
             }}>
             </textarea>
           </label>
+          <div className="w-full" style={{ height: '10rem' }}></div>
+
+          <input type="file" accept="image/*" onChange={ 
+            async (e)=>{
+              let file = e.target.files[0]
+              let filename = encodeURIComponent(file.name)
+              let res = await fetch('/api/post/image?file=' + filename)
+              res = await res.json()
+
+              //S3 업로드
+              const formData = new FormData()
+              Object.entries({ ...res.fields, file }).forEach(([key, value]) => {
+                formData.append(key, value)
+              })
+              let uploadResult = await fetch(res.url, {
+                method: 'POST',
+                body: formData,
+              })
+              console.log(uploadResult)
+
+              if (uploadResult.ok) {
+                setSrc(uploadResult.url + '/' + filename)
+              } else {
+                console.log('실패')
+              }
+            }
+          } />
+          <img src={src} />
+
           <div className="w-full" style={{ height: '10rem' }}></div>
               
           <div className="flex">
