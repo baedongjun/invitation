@@ -12,7 +12,7 @@ export default function BottomIcon(props){
       style={{ width:'36rem', height:'36rem', cursor : 'pointer' }} 
     />
   )
-} 
+}  
  
 
 
