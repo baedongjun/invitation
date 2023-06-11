@@ -1,5 +1,5 @@
 // POST 메서드 구현 예제
-async function deleteData(url = '', data = {}) {
+async function deleteData(url, data) {
   // 옵션 기본 값은 *로 강조
   const response = await fetch(url, {
     method: 'DELETE', // *GET, POST, PUT, DELETE 등
