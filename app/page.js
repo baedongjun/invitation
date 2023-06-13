@@ -1,6 +1,13 @@
+import Info from "components/Info";
+import MainVideo from "components/MainVideo";
+import PhotoList from "components/PhotoList";
 
 export default function Home() {
   return (
-    <div>HOME</div>
+    <>
+    <MainVideo/>
+    <Info/>
+    <PhotoList/>
+    </>
   ) 
 }

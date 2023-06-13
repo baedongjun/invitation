@@ -1,12 +1,11 @@
-import BottomBar from '/components/Bottombar';
 import './globals.css'
 
 export const metadata = {
   title : {
-    default : '배동준의 빡코딩',
+    default : '모바일 청첩장',
     template : ''
   },
-  description : '오늘도 빡코딩!'
+  description : '모바일 청첩장'
 }
 
 export default function RootLayout({ children }) {
@@ -16,7 +15,6 @@ export default function RootLayout({ children }) {
         <div id="__next" data-reactroot>
           <div id="main_container" className="max-w-screen-t m-auto flex flex-col min-h-screen ">
             {children}
-            <BottomBar/>
           </div>
         </div>
       </body>
