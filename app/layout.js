@@ -2,10 +2,10 @@ import './globals.css'
 
 export const metadata = {
   title : {
-    default : '모바일 청첩장',
+    default : '배동준♥배진영 결혼합니다.',
     template : ''
   },
-  description : '모바일 청첩장'
+  description : '배동준♥배진영 결혼합니다.'
 }
 
 export default function RootLayout({ children }) {

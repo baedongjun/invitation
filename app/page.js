@@ -1,6 +1,7 @@
 import Info from "components/Info";
 import MainVideo from "components/MainVideo";
 import PhotoList from "components/PhotoList";
+import WayInfo from "components/WayInfo";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
     <MainVideo/>
     <Info/>
     <PhotoList/>
+    <WayInfo/>
     </>
   ) 
 }
